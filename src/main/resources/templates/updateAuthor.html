@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Author Page</title>
+</head>
+<body>
+<form th:action="@{updateAuthorData(id=${author.id})}" method="post">
+    <table border="1px">
+        <tr>
+            <th>Name:</th>
+            <th>Surname:</th>
+            <th>Email:</th>
+            <th>Gender:</th>
+        </tr>
+        <tr>
+            <td><input type="text" th:field="*{author.name}" name="name"></td>
+
+            <td><input type="text" th:field="*{author.surname}" name="surname"></td>
+
+            <td><input type="text" th:field="*{author.email}" name="email"></td>
+
+            <td><input type="text" th:field="*{author.gender}" name="gender"></td>
+
+            <td><input type="submit" value="Update"></td>
+        </tr>
+
+
+    </table>
+</form>
+</body>
+</html>
